@@ -1,7 +1,7 @@
 ## Sensores
 
 Sensores são utilizados para aguardar até uma ação ocorrer, antes de ir para a próxima tarefa.
-Verificar o script [sensor.py](./dags/sensor.py) para ver como deve ser desenvolvido.
+Verificar o script [sensor.py](./dags/sensor_and_bashOperator.py) para ver como deve ser desenvolvido.
 
 Notas
   1. Na interface, selecionar Admin -> Connections

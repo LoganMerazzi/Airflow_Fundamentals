@@ -10,7 +10,10 @@ from datetime import datetime, timedelta
 
 default_args = {
     'retry': 5,
-    'retry_delay': timedelta(minutes=5)
+    'retry_delay': timedelta(minutes=5)#,
+    #'email_on_failure': True,
+    #'email_on_retry': True,
+    #'email': 'loganmerazzi@gmail.com'
 }
 
 def _downloading_data(ti, **kwargs):
@@ -22,6 +25,10 @@ def _check_data(ti):
     my_xcom = ti.xcom_pull(key='chave_personalizada', task_ids=['downloading_data'])
     print(my_xcom)
     
+def _failure(context):
+    print("Deu erro")
+    print(context)
+
 with DAG (
     dag_id = 'Forcando_erros', 
     default_args = default_args,
@@ -49,7 +56,8 @@ with DAG (
 
     processing_data = BashOperator(
         task_id = 'processing_data',
-        bash_command = 'exit 1' # Este comando indica que a task finalizou com erro
+        bash_command = 'exit 1', # Este comando indica que a task finalizou com erro
+        on_failure_callback = _failure
     )
 
     chain(downloading_data, check_data, waiting_for_data , processing_data)

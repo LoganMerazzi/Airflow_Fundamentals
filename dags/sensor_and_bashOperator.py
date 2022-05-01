@@ -50,4 +50,5 @@ with DAG (
         bash_command = 'exit 0'
     )
 
+    # downloading_data >> waiting_for_data >> processing_data
     chain(downloading_data, waiting_for_data , processing_data)

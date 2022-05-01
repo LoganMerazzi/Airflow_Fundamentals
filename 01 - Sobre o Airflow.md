@@ -11,7 +11,6 @@ Não use o Airflow como se estivesse usando o Spark. Para isso, chame um job do 
 ## Core Components
 
 - Web Server
-    - 
 - Scheduler
 - Metadata Database
 
@@ -26,23 +25,23 @@ Dados os componentes, é possível criar diversos tipos de arquiteturas usando o
 
 - Single Node
 
-<img src="img/Single_Node.svg">
-
     - Neste caso, todos os recursos ficam disponíveis em uma unica máquina.
       - Não escala.
     - O Web Server é responsável por retornar os dados do banco de dados
     - O Scheduler se comunica com a base para verificar os horários de execução e realiza as chamadas para o Executor
     - O Executor faz o processamento (insere na fila - que faz parte do Executor, nesta arquitetura) e retorna as informações para o Banco.
 
-- Multi Node cluster
+<img src="img/Single_Node.svg">
 
-<img src="img/Multi_Node.svg">
+- Multi Node cluster
 
     - Neste modelo os recursos ficam disponíveis em "nós" e é possível escalar conforme a necessidade.
     - O WebServer é responsável por retornar os dados do banco de dados
     - O Scheduler se comunica com a base para verificar os horários de execução e realiza as chamadas para o Executor
     - O Executor coloca as informações na fila (desta vez, à parte do Executor) e os workers buscam os dados da fila para processar.
     - Com isso, caso seja necessário aumentar o paralelismo, basta adicionar novos workers no cluster.
+
+<img src="img/Multi_Node.svg">
 
 ## Conceitos
 

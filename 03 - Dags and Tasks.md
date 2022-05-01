@@ -1,5 +1,7 @@
-Acessar a pasta DAGS para ver os scripts criados para testes.
-Estes scripts devem estar dentro da pasta dags do airflow, para funcionar.
+DAGs iniciais:
+
+- [simple_dag](./dags/simple_dag.py)
+  - A DAG mais simples possível.
 
 ## DAG Scheduling
 
@@ -34,3 +36,4 @@ Execução 3:
   - execution_date: 15/10/2022 18:00
 
 E assim por diante.
+

@@ -19,3 +19,4 @@ ou
 
 <img src="img/xcom_return_2.png">
 
+Referência: Script [xcoms.py](./dags/xcoms.py)

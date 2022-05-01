@@ -1,5 +1,7 @@
 ## Parâmetro schedule_interval
 
+Ver o uso do parâmetro no script [simple_dag_03](./dags/simple_dag_03.py)
+
 Valor default: 24 horas
 O parametro pode ser:
   - uma expressão *cron* (crontab)

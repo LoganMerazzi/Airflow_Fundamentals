@@ -1,5 +1,7 @@
 ## Como chamar uma função em python:
 
+Referência: Script [python_operator.py](./dags/python_operator.py)
+
     def _funcao_criada():
         print('saída da função')
 

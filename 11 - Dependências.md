@@ -55,3 +55,5 @@ Se tentar rodar da forma abaixo, dará erro, pois não é possível criar depend
         [task1, task2] >> [task3, task4]
 
 <img src="img/erro_cross_downstream.png">
+
+Referência: Verificar o script [sensor_and_bashOperator.py](./dags/sensor_and_bashOperator.py)
