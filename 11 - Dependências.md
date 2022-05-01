@@ -2,7 +2,7 @@
 
 Quando você cria uma DAG com várias tasks, mas não informa a ordem em que as tasks devem ser executadas, ela é exibida da seguinte forma na interface:
 
-<img src="img/Sem_Dependencias.png">
+<img src="img/Sem_dependencias.png">
 
 Para resolver isso, existem algumas formas de especificar a ordem de execução das tasks.
 
