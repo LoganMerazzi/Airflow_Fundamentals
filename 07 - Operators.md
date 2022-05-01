@@ -26,5 +26,5 @@ Alguns parâmetros:
 
 E se eu precisar reaproveitar estes parâmetros para outras tarefas?
 Usar o parâmetro *default_args* na DAG. 
-(ver a dag [dafault_parameters.py](./dags/dafault_parameters.py))
+(ver a dag [default_parameters.py](./dags/default_parameters.py))
 
